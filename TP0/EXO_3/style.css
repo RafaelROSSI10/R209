@@ -1,0 +1,38 @@
+body {
+    background-color: #E0E0E0; /* Fond gris */
+    max-width: 600px;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+fieldset {
+    border: 1px solid #a0a0a0;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.centre-img {
+    text-align: center;
+}
+
+.centre-img img {
+    height: 120px; /* Hauteur de l'image spécifiée */
+}
+
+.centre-options {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="submit"] {
+    background-color: #317AC1;
+    color: white;
+    width: 240px; /* Largeur du bouton spécifiée */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
