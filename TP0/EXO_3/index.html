@@ -36,35 +36,5 @@
         </fieldset>
     </form>
 
-    <script>
-
-            const choix = document.querySelector('input[name="sphere"]:checked').value;
-            const rayon = parseFloat(document.getElementById('rayon').value);
-            const affichage = document.getElementById('zone-resultat');
-
-
-            if (rayon <= 0) {
-                affichage.innerHTML = "<span style='color: red;'>Le rayon doit être supérieur à 0.</span>";
-                return;
-            }
-
-            let resultat = 0;
-            let phrase = "";
-
-
-            if (choix === "surface") {
-                // Formule de la surface : 4 * Pi * R²
-                resultat = 4 * Math.PI * Math.pow(rayon, 2);
-                phrase = `La surface de la sphère est de : <strong>${resultat.toFixed(2)} m²</strong>`;
-            } else {
-                // Formule du volume : (4/3) * Pi * R³
-                resultat = (4 / 3) * Math.PI * Math.pow(rayon, 3);
-                phrase = `Le volume de la sphère est de : <strong>${resultat.toFixed(2)} m³</strong>`;
-            }
-
-
-            affichage.innerHTML = phrase;
-        });
-    </script>
 </body>
 </html>
