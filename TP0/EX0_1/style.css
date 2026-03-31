@@ -1,0 +1,33 @@
+form {
+    margin: auto; [cite: 16]
+    max-width: 500px; [cite: 17]
+}
+
+label { [cite: 23]
+    display: block; [cite: 25]
+    margin-top: 10px; [cite: 26]
+    margin-bottom: 5px; [cite: 27]
+}
+
+input[type="text"], [cite: 28]
+input[type="email"], [cite: 29]
+textarea { [cite: 29]
+    width: 100%; [cite: 37]
+    padding: 10px; [cite: 38]
+    margin-bottom: 5px; [cite: 40]
+    margin-top: 0px; [cite: 41]
+    border: 1px solid #a0a0a0; [cite: 43]
+    border-radius: 4px; [cite: 44]
+}
+
+input[type="submit"] { [cite: 49]
+    background-color: #4caf50; [cite: 51]
+    color: white; [cite: 53]
+    padding: 10px 20px 10px 20px; [cite: 54]
+    border: none; [cite: 55]
+    border-radius: 4px; [cite: 56]
+}
+
+input[type="submit"]:hover { [cite: 57]
+    background-color: #45A049; [cite: 59]
+}
