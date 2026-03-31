@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="#" method="POST">
+    <form id="form-sphere">
         <fieldset>
             <legend>Calcul de la surface ou du volume d'une sphere</legend>
 
@@ -24,13 +24,47 @@
 
             <div class="centre-options">
                 <label for="rayon">Rayon en mètres :</label>
-                <input type="number" id="rayon" name="rayon">
+                <input type="number" id="rayon" name="rayon" step="0.01" required>
             </div>
 
             <div class="centre-options">
                 <input type="submit" value="Calculer">
             </div>
+
+            <div id="zone-resultat" class="centre-options resultat-style">
+                </div>
         </fieldset>
     </form>
+
+    <script>
+
+            const choix = document.querySelector('input[name="sphere"]:checked').value;
+            const rayon = parseFloat(document.getElementById('rayon').value);
+            const affichage = document.getElementById('zone-resultat');
+
+
+            if (rayon <= 0) {
+                affichage.innerHTML = "<span style='color: red;'>Le rayon doit être supérieur à 0.</span>";
+                return;
+            }
+
+            let resultat = 0;
+            let phrase = "";
+
+
+            if (choix === "surface") {
+                // Formule de la surface : 4 * Pi * R²
+                resultat = 4 * Math.PI * Math.pow(rayon, 2);
+                phrase = `La surface de la sphère est de : <strong>${resultat.toFixed(2)} m²</strong>`;
+            } else {
+                // Formule du volume : (4/3) * Pi * R³
+                resultat = (4 / 3) * Math.PI * Math.pow(rayon, 3);
+                phrase = `Le volume de la sphère est de : <strong>${resultat.toFixed(2)} m³</strong>`;
+            }
+
+
+            affichage.innerHTML = phrase;
+        });
+    </script>
 </body>
 </html>
